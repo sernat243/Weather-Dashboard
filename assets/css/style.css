@@ -1,0 +1,50 @@
+/* Reset default margin and padding for the body */
+body {
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Styles for the header */
+  header {
+    background-color: blue;
+    padding: 20px;
+    text-align: center; /* Center the text within the header */
+  }
+  
+  h1 {
+    color: white;
+    font-weight: bold;
+    margin: 0;
+  }
+  
+  /* Styles for the aside and its content */
+  aside {
+    background-color: #f0f0f0;
+    padding: 20px;
+    width: 300px; /* Adjust the width as per your preference */
+    float: left; /* Move the entire aside to the left side */
+  }
+  
+  .search-div {
+    text-align: center; /* Center the content within the div */
+  }
+  
+  .search-div p {
+    font-weight: bold; /* Make the <p> element bold */
+  }
+  
+  .search-div input[type="text"] {
+    display: block;
+    margin: 10px auto;
+    padding: 5px;
+    width: 200px;
+    border: 1px solid #ccc;
+  }
+  
+  .search-div button {
+    background-color: blue; /* Blue background for the button */
+    color: white; /* White text color for the button */
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+  }
