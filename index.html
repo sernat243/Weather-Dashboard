@@ -15,8 +15,8 @@
   <aside>
     <div class="search-div">
       <p>Search for a City:</p>
-      <input type="text" placeholder="Please type city name">
-      <button>Search</button>
+      <input type="text" id="cityInput" placeholder="Please type city name">
+      <button id="searchButton">Search</button>
     </div>
     <div class="second-div">
       <!-- This div will be used later -->
@@ -25,11 +25,11 @@
     
   <main>
     <div class="weather-info">
-      <!-- Display info requested with the OpenWeather API here -->
-      <p>City: Placeholder City</p>
-      <p>Temperature: Placeholder Temperature</p>
-      <p>Weather: Placeholder Weather</p>
-    </div>
+        <h2 id="city">Placeholder City</h2>
+        <p>Temp: <span id="temperature">Placeholder Temperature</span></p>
+        <p>Wind: <span id="wind">Placeholder Wind</span></p>
+        <p>Humidity: <span id="humidity">Placeholder Humidity</span>%</p>
+      </div>
 
     <div class="forecast">
       <p>5-day forecast:</p>
@@ -55,5 +55,6 @@
       </div>
     </div>
   </main>
+  <script src = "assets/js/script.js"></script>
 </body>
 </html>
