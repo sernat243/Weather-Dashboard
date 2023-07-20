@@ -48,3 +48,30 @@ body {
     border: none;
     cursor: pointer;
   }
+  
+  /* Styles for the main section */
+  main {
+    margin-left: 320px; /* Leave a little margin to the right of the aside */
+    padding: 20px;
+  }
+  
+  .weather-info {
+    border: 1px solid #ccc; /* Add a border to the weather info div */
+    padding: 10px;
+    margin-bottom: 20px; /* Add a little margin at the bottom of the weather info div */
+  }
+  
+  .forecast {
+    margin-top: 20px; /* Add a little margin at the top of the forecast div */
+  }
+  
+  /* Styles for the 5-day forecast divs */
+  .day-1,
+  .day-2,
+  .day-3,
+  .day-4,
+  .day-5 {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 10px;
+  }
