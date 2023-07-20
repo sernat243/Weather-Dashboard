@@ -18,6 +18,24 @@ function addToSearchHistory(city) {
     localStorage.setItem('searchHistory', JSON.stringify(searchHistory));
   }
 
+// Function to display the search history as buttons
+function displaySearchHistory() {
+    const searchHistory = JSON.parse(localStorage.getItem('searchHistory')) || { cities: [] };
+    const searchHistoryDiv = document.querySelector('.search-history');
+    searchHistoryDiv.innerHTML = '';
+  
+    for (const city of searchHistory.cities) {
+      const button = document.createElement('button');
+      button.textContent = city;
+      button.addEventListener('click', () => {
+        // Call the API with the selected city when the button is clicked
+        searchWeather(city);
+      });
+      searchHistoryDiv.appendChild(button);
+    }
+  }  
+
+    //event listener for search button
     searchButton.addEventListener('click', () => {
         const city = cityInput.value;
         if (city.trim() === '') {
@@ -39,7 +57,10 @@ function addToSearchHistory(city) {
             const cityIcon = data.list[0].weather[0].icon;
             console.log(cityIcon);
             console.log(data);
+
             addToSearchHistory(city);
+
+            displaySearchHistory();
 
             const formattedDate = dayjs(date).format('MM/DD/YYYY');
     
@@ -71,3 +92,5 @@ function addToSearchHistory(city) {
             console.error('Error fetching data:', error);
           });
       });
+
+      displaySearchHistory();
