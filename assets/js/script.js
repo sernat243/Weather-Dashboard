@@ -27,9 +27,11 @@ const apiKey = '89159feb546b2bfd8414fbf0260c7099'
             const humidity = data.list[0].main.humidity;
             const date = data.list[0].dt_txt;
             console.log(data);
+
+            const formattedDate = dayjs(date).format('MM/DD/YYYY');
     
             // Update the content of the weather-info div
-            cityElement.textContent = cityName;
+            cityElement.textContent = cityName + " " + "(" + formattedDate + ")";
             temperatureElement.textContent = temperature + ' °C';
             windElement.textContent = wind + ' m/s';
             humidityElement.textContent = humidity;
