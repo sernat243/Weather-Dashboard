@@ -11,6 +11,13 @@ const apiKey = '89159feb546b2bfd8414fbf0260c7099'
 
     const forecastDays = document.querySelectorAll('.forecast > div');
 
+    // Function to store the searched city in local storage
+function addToSearchHistory(city) {
+    const searchHistory = JSON.parse(localStorage.getItem('searchHistory')) || { cities: [] };
+    searchHistory.cities.push(city);
+    localStorage.setItem('searchHistory', JSON.stringify(searchHistory));
+  }
+
     searchButton.addEventListener('click', () => {
         const city = cityInput.value;
         if (city.trim() === '') {
@@ -32,6 +39,7 @@ const apiKey = '89159feb546b2bfd8414fbf0260c7099'
             const cityIcon = data.list[0].weather[0].icon;
             console.log(cityIcon);
             console.log(data);
+            addToSearchHistory(city);
 
             const formattedDate = dayjs(date).format('MM/DD/YYYY');
     
