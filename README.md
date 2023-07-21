@@ -27,7 +27,7 @@ To access the Weather Dashboard App, follow these steps:
 ## Screenshot
 Below is a screenshot of the Weather Forecast App showcasing its user interface:
 
-![Weather Forecast App Screenshot](./assets/images/screenshot.png))
+![Weather Forecast App Screenshot](./assets/images/screenshot.png)
 
 ## License
 The Weather Forecast App is licensed under the MIT License. For more details, please refer to the [LICENSE](LICENSE) file.
