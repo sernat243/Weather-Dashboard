@@ -114,6 +114,13 @@ function fetchWeatherData(city) {
             dayElement.querySelector('.temperature').textContent = temperature + ' °C';
             dayElement.querySelector('.wind').textContent = wind + ' m/s';
             dayElement.querySelector('.humidity').textContent = humidity;
+
+            //remove hidden style from 5-day forecast divs
+            forecastDays.forEach((dayElement, index) => {
+                if (index < data.list.length - 1) {
+                  dayElement.classList.remove('hidden');
+                }
+              });
         }
         })
         .catch(error => {

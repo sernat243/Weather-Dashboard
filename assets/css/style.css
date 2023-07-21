@@ -2,6 +2,7 @@
 body {
     margin: 0;
     padding: 0;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
   }
   
   /* Styles for the header */
@@ -23,6 +24,7 @@ body {
     padding: 20px;
     width: 300px; /* Adjust the width as per your preference */
     float: left; /* Move the entire aside to the left side */
+    margin-top: 20px;
   }
   
   .search-div {
@@ -48,30 +50,72 @@ body {
     border: none;
     cursor: pointer;
   }
+
+  /* Add margin to the search history div */
+  .search-history {
+    margin-top: 20px;
+  }
+  
+  /* Style for the search history buttons */
+  .search-history button {
+    display: block;
+    width: 200px;
+    height: 40px;
+    margin: 10px auto;
+    background-color: #707070;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
   
   /* Styles for the main section */
   main {
     margin-left: 320px; /* Leave a little margin to the right of the aside */
     padding: 20px;
+    display: flex; /* Use flexbox to display the forecast divs in a row */
+    flex-wrap: wrap; /* Allow the forecast divs to wrap if the screen is smaller */
   }
   
   .weather-info {
     border: 1px solid #ccc; /* Add a border to the weather info div */
     padding: 10px;
     margin-bottom: 20px; /* Add a little margin at the bottom of the weather info div */
+    flex-basis: 100%; /* Make the weather info div take up the full width on smaller screens */
+  }
+
+  /* Styles for the forecast header */
+  .forecast-header {
+    width: 100%; /* Take up the full width */
+    text-align: left;
+    margin-bottom: 10px; /* Add some margin at the bottom */
   }
   
+  .forecast-header p {
+    font-size: 18px; /* Increase the font size for the header text */
+    font-weight: bold; /* Add bold style to the header text */
+  }
+
   .forecast {
-    margin-top: 20px; /* Add a little margin at the top of the forecast div */
+    display: flex; /* Enable flex behavior for the forecast divs */
+    flex-wrap: wrap; /* Allow the forecast divs to wrap if the screen is smaller */
+    justify-content: space-between; /* Distribute the divs with equal space between them */
+    align-items: flex-start; /* Align the divs to the top (start) of the row */
   }
   
   /* Styles for the 5-day forecast divs */
-  .day-1,
-  .day-2,
-  .day-3,
-  .day-4,
-  .day-5 {
+  .forecast > div {
     border: 1px solid #ccc;
     padding: 10px;
     margin-bottom: 10px;
+    flex-basis: calc(20% - 20px); /* Calculate the width to fit 5 divs in a row with some margin in between */
+    box-sizing: border-box;
+    
+  }
+
+  /* Add a class to hide the forecast divs */
+  .forecast > div.hidden {
+    display: none;
   }
