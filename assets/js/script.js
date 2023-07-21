@@ -11,8 +11,16 @@ const humidityElement = document.getElementById('humidity');
 
 const forecastDays = document.querySelectorAll('.forecast > div');
 
+// Function to capitalize the first letter of a string
+function capitalizeFirstLetter(str) {
+    return str.charAt(0).toUpperCase() + str.slice(1).toLowerCase();
+  }
+
 // Function to store the searched city in local storage
 function addToSearchHistory(city) {
+    // Capitalize the first letter and convert the rest to lowercase
+    city = capitalizeFirstLetter(city.trim());
+    
     const searchHistory = JSON.parse(localStorage.getItem('searchHistory')) || { cities: [] };
 
     // Check if the city already exists in the search history
