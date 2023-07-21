@@ -20,7 +20,7 @@ body {
   
   /* Styles for the aside and its content */
   aside {
-    background-color: #f0f0f0;
+    background-color: #ffffff;
     padding: 20px;
     width: 300px; /* Adjust the width as per your preference */
     float: left; /* Move the entire aside to the left side */
@@ -44,8 +44,9 @@ body {
   }
   
   .search-div button {
-    background-color: blue; /* Blue background for the button */
-    color: white; /* White text color for the button */
+    background-color: blue;
+    border-radius: 5px;
+    color: white;
     padding: 10px 20px;
     border: none;
     cursor: pointer;
@@ -86,6 +87,10 @@ body {
     flex-basis: 100%; /* Make the weather info div take up the full width on smaller screens */
   }
 
+  #city {
+    display: inline;
+  }
+
   /* Styles for the forecast header */
   .forecast-header {
     width: 100%; /* Take up the full width */
@@ -112,6 +117,9 @@ body {
     margin-bottom: 10px;
     flex-basis: calc(20% - 20px); /* Calculate the width to fit 5 divs in a row with some margin in between */
     box-sizing: border-box;
+    background-color: #413c51;
+    text-decoration: bold;
+    color: white;
     
   }
 
